@@ -1,0 +1,80 @@
+---
+layout:     post
+title:      "Git使用教程（Windows）"
+subtitle:   " 使用Git上传代码"
+date:       2020-04-13 12:00:00
+author:     "Kai"
+background: '/img/posts/001.jpg'
+---
+
+
+## 前言
+
+Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理，所以在近年来，备受各大企业的青睐。它的便捷高效性为多数开发者提供便利。废话不多说，开始学习怎么在win下使用git指令将本地仓库提交到远程仓库。
+
+## 正文
+
+1、准备工作<br>
+下载Git管理工具：git下载，关于安装就不多说了，一直next就可以了。<br>
+2、安装完成<br>
+在你的右击菜单中会出现Git GUI Here和Git Bash Here两个选项,打开git bash here窗口，我们就可以使用git指令进行git相关操作啦。<br>
+接下来我们讲一下通过一些指令，如何clone远端仓库，并提交文件到远端仓库。<br>
+1、注册github账号<br>
+2、开始在本地做一些git相关配置 注意：在做以下操作的时候，打开电脑的“显示隐藏文件”<br>
+2.1设置git的user.name和user.email
+```
+git config --global user.name "你的github用户名"  //创建一个.gitconfig文件
+git config --global user.email "你的邮箱地址"
+cd ~/.   //进入根目录
+ls       //查看当前目录下的文件
+```
+2.2生成ssh密钥<br>
+2.2.1首先查看是否存在ssh密钥
+```
+cd ~/.ssh  //查看根目录下有没有ssh这个文件
+```
+2.2.2生成密钥
+```
+ssh-keygen -t rsa -C "你的邮箱" 
+//在根目录的.ssh文件中会生成id_rsa(私钥)、id_rsa.pub(公钥)<br>两个文件
+```
+2.3接下来我们去github
+```
+Setting----SSH and GPG keys----New ssh keys   
+//把id_rsa.pub(公钥)里的内容复制到key中
+```
+3.开始与github建立连接，也是最重要的一步
+```
+ssh -T git@github.com     //链接github
+Are you sure you want to continue connecting (yes/no)?  输入yes
+Hi WangYuren! You've successfully authenticated, but GitHub does not provide shell access. 表示链接成功。
+```
+3.1接下来去github新建仓库
+```
+仓库名为username.github.io，选择public
+```
+3.2接下来找一个你存放项目的空文件夹，将远程仓库clone到本地
+```
+git clone https://github.com/fengqikai/fengqikai.github.io.git //仓库链接
+如果成功，会看到从仓库clone下来的你刚刚创建的文件夹  //(git init)
+```
+现在你在文件夹中可以将你的项目，或者一些文件放在这里，然后使用命令开始将文件放到远程仓库去了<br>
+3.3上传文件至远程仓库
+```
+1、查看仓库当前状态
+git status   //这时候显示你的文件是红色的
+2、将文件添加到暂存区
+git add .    //add后面有个点，不能丢掉，这表示将全部文件添加到暂存区
+3、提交，并附上日志信息
+git commit -m "备注信息"    //引号之间填写备注信息
+4、最后一步，就是push到远端服务器
+git push origin master  //这时候就是将所有文件提交到远端仓库了
+git push -u origin master//第一次提交用这个
+5、如果出现报错error: failed to push some refs to
+git push -u origin master -f
+```
+大功告成，可以去你的github刷新一下仓库页面看看文件有木有被提交上去。<br>
+<br>
+参考文章：<br>
+[关于git在windows下的简单使用](https://www.jianshu.com/p/67e6ae57595e) <br>
+[failed to push some refs to](https://blog.csdn.net/qq_42469247/article/details/90757708) <br>

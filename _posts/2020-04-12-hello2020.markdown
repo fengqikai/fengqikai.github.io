@@ -2,7 +2,7 @@
 layout:     post
 title:      "Hello World!  你好，世界！"
 subtitle:   " Welcome to My Blog"
-date:       2020-04-13 12:00:00
+date:       2020-04-12 12:00:00
 author:     "Kai"
 background: '/img/posts/001.jpg'
 ---
@@ -30,4 +30,5 @@ background: '/img/posts/001.jpg'
 * 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了
 * Jekyll 的自定制非常容易，基本就是个模版引擎
 
-搭建步骤主要参考：[Jekyll + Github Pages搭建个人博客](http://www.imooc.com/article/289865) 这篇文章。
+搭建步骤主要参考：[Jekyll + Github Pages搭建个人博客](http://www.imooc.com/article/289865) 这篇文章。<br>
+[Clean Blog](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
