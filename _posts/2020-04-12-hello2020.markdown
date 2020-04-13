@@ -31,4 +31,4 @@ background: '/img/posts/001.jpg'
 * Jekyll 的自定制非常容易，基本就是个模版引擎
 
 搭建步骤主要参考：[Jekyll + Github Pages搭建个人博客](http://www.imooc.com/article/289865) 这篇文章。<br>
-[Clean Blog](http://blackrockdigital.github.io/startbootstrap-clean-blog-jekyll/)
+[Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll)
