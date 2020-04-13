@@ -1,0 +1,33 @@
+---
+layout:     post
+title:      "Hello World!  你好，世界！"
+subtitle:   " Welcome to My Blog"
+date:       2020-04-13 12:00:00
+author:     "Kai"
+background: '/img/posts/001.jpg'
+---
+
+> “Hello World! ”
+
+
+## 前言
+
+一切都要从一只蝙蝠说起......
+
+因为疫情的原因在家憋了这么久，发现可以通过GitHub Pages搭建个人博客，为了多学点知识（划掉，为了消磨时间），经过这几天的折腾，总算把这个博客搭建好了。
+
+## 正文
+
+接下来说说搭建这个博客的技术细节。  
+
+采用 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+
+其优点非常明显：
+
+* **Markdown** 带来的优雅写作体验
+* 非常熟悉的 Git workflow ，**Git Commit 即 Blog Post**
+* 利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
+* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了
+* Jekyll 的自定制非常容易，基本就是个模版引擎
+
+搭建步骤主要参考：[Jekyll + Github Pages搭建个人博客](http://www.imooc.com/article/289865) 这篇文章。
